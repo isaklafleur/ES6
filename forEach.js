@@ -1,3 +1,8 @@
+///////////////////////
+// ES6 - forEach helper
+///////////////////////
+
+/*
 var colors = ['red', 'blue', 'green'];
 
 //ES5 for loop
@@ -45,3 +50,42 @@ function adder(number) {
 numbers.forEach(adder);
 
 console.log(sum3);
+
+// ==============================
+
+
+// Moving Away from For Loops
+
+function handlePosts() {
+    var posts = [
+      { id: 23, title: 'Daily JS News' },
+      { id: 52, title: 'Code Refactor City' },
+      { id: 105, title: 'The Brightest Ruby' }
+    ];
+
+    //ES5
+    for (var i = 0; i < posts.length; i++) {
+      savePost(posts[i]);
+    }
+    
+    //ES6
+    posts.forEach(savePost);
+}
+
+// ==============================
+
+//Processing Values
+
+var images = [
+  { height: 10, width: 30 },
+  { height: 20, width: 90 },
+  { height: 54, width: 32 }
+];
+var areas = [];
+
+//ES6
+images.forEach(function(image) {
+    areas.push(image.height * image.width);
+});
+*/
+
