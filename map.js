@@ -1,5 +1,5 @@
 ///////////////////////
-// ES6 - forEach helper
+// ES6 - map helper
 ///////////////////////
 /*
 var numbers = [1,2,3];
