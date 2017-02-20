@@ -15,7 +15,7 @@ console.log('ES5 with for loop:', sum);
 */
 
 numbers.reduce(function(sum, number) {
-    return sum + number;
+  return sum + number;
 }, 0);
+console.log(sum);
 
-console.log('ES6 with the Reduce Helper:', sum);
