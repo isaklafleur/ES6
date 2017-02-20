@@ -43,4 +43,71 @@ console.log(primaryColorArrayReduce);
 */
 
 // ====================================================================
+/*
+function balancedParens(string) {
+    return !string.split('').reduce(function(previous, char) {
+        if (previous < 0) { return previous; }
+        if (char === '(') { return ++previous; }
+        if (char === ')') { return --previous; }
+        return previous;
+    }, 0);
+}
+console.log(balancedParens('())('));
+*/
+// ====================================================================
 
+// Distance Traveled
+
+var trips = [{ distance: 34 }, { distance: 12 } , { distance: 1 }];
+
+var totalDistance = trips.reduce(function(base, trip) {
+    return trip.distance + base;
+}, 0);
+console.log(totalDistance);
+// => 47
+
+///////////////////
+
+var trips = [{ distance: 34 }, { distance: 12 } , { distance: 1 }];
+
+var totalDistance = trips.reduce(function(base, sum) {
+    return sum.distance + base;
+}, 0);
+console.log(totalDistance);
+// => 47
+
+///////////////////
+
+var sum = 0;
+
+var trips = [{ distance: 34 }, { distance: 12 } , { distance: 1 }];
+
+var totalDistance = trips.reduce(function(base, sum) {
+    return sum.distance + base;
+}, 0);
+console.log(totalDistance);
+// => 47
+
+// ==================================================
+
+//Reducing Properties
+
+var desks = [
+  { type: 'sitting' },
+  { type: 'standing' },
+  { type: 'sitting' },
+  { type: 'sitting' },
+  { type: 'standing' }
+];
+
+var deskTypes = desks.reduce(function(tally, desk) {
+    tally[desk.type] += 1;
+    return tally;
+    
+    
+}, { sitting: 0, standing: 0 });
+
+
+// ==================================================
+
+// Hardmode: Custom 'Unique' Helper
