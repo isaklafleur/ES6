@@ -62,3 +62,23 @@ console.log(toyota);
 console.log(toyota.drive());
 console.log(toyota.honk());
 */
+
+class Monster {
+  constructor(options) {
+    this.health = 100;
+    this.name = options.name;
+  }
+}
+
+class Snake extends Monster {
+    constructor(options) {
+        super(options);
+    }
+    
+    bite(snake) {
+        return snake.health -= 10;
+    }
+}
+const orm1 = new Snake({ name: 'Cobra'});
+const orm2 = new Snake({ name: 'Skallerorm' });
+console.log(orm1.bite(orm2));
